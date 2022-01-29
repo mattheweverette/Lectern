@@ -1,3 +1,2 @@
-# ignore venv
-lectern-env
+lectern-venv
 cockroach
