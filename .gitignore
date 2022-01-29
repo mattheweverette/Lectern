@@ -1,4 +1,3 @@
 # ignore venv
 lectern-env
-cockroachdb
-
+cockroach
