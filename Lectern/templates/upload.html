@@ -1,0 +1,13 @@
+<html>
+    <head>
+        <title>Lectern - Upload Audio</title>
+    </head>
+    <body>
+        <h1>Audio Uploader</h1>
+        <form enctype="multipart/form-data" method="POST" action="">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit" value="Upload"/>
+        </form>
+    </body>
+</html>
