@@ -1,13 +1,18 @@
-<html>
-    <head>
-        <title>Lectern - Upload Audio</title>
-    </head>
-    <body>
-        <h1>Audio Uploader</h1>
-        <form enctype="multipart/form-data" method="POST" action="">
-            {% csrf_token %}
-            {{ form.as_p }}
-            <input type="submit" value="Upload"/>
+{% extends "base.html" %}
+
+{% block title %}Lectern - Upload Audio{% endblock %}
+
+{% block content %}
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h2>Audio Uploader</h2>
+        </div>
+        <div class="panel-body"><form enctype="multipart/form-data" method="POST" action="">
+            <div class="form-group">
+                {% csrf_token %}
+                {{ form.as_p }}
+            </div>
+            <input type="submit" class="btn btn-default" value="Upload"/>
         </form>
-    </body>
-</html>
+    </div>
+{% endblock %}

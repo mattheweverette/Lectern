@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+
+{% block title %}Lectern - Login{% endblock %}
+
+{% block content %}
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h2>Log In</h2>
+    </div>
+    <div class="panel-body">
+    <form method="POST">
+        {% csrf_token %}
+        <field class="form-group">
+            {{ form|crispy }}
+        </fieldset>
+        <div class="form-group">
+            <button type="submit" class="btn btn-default">Log In</button>
+        </div>
+    </form>
+    <div class="border-top pt-3">
+        <small class="text-muted">Need An Account? <a class="ml-2" href="{% url 'register' %}">Sign Up Now</a>
+    </div>
+</div>
+</div>    
+    
+{% endblock %}
+
+

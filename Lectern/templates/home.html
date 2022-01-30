@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block title %}Lectern{% endblock %}
+
+{% block content %}
+    {% for lecture in lecture_list %}
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3>{{ lecture.name }} <small>Posted by {{ lecture.poster.username }} on {{ lecture.date_uploaded }}</small></h3>
+            </div>
+            <div class="panel-body"><form enctype="multipart/form-data" method="POST" action="">
+                <div class="form-group">
+                    <audio controls>
+                        <source src="/media/{{ lecture.audio_file }}">
+                    </audio>
+                    <p>File: {{ lecture.audio_file }} </p>
+                    <p>Posted by {{ lecture.poster.username }}</p>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+{% endblock %}

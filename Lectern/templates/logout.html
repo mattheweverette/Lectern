@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block title %}Lectern - Logout{% endblock %}
+
+{% block content %}
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h2>You have been logged out</h2>
+    </div>
+    <div class="panel-body">
+    <div class="border-top pt-3">
+        <a class="ml-2" href="{% url 'login' %}">Log In Again</a>
+    </div>
+    </div>
+</div>    
+    
+{% endblock %}
+
+
