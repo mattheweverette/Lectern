@@ -30,7 +30,7 @@ def upload(request):
             lecture = Lecture.create(name, file.name, request.user)
             lecture.save()
 
-            get_transcript.delay(f'media/{file.name}')
+            get_transcript.delay(lecture, f'media/{file.name}')
             messages.success(request, f'Successfully uploaded {name}!')
             return HttpResponseRedirect('upload')
     else:
