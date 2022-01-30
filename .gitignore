@@ -1,3 +1,4 @@
 lectern-env/**
 *.mp3
 *.crt
+secrets.sh
